@@ -3,22 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <title>My Website</title>
     </head>
     <body>
     <header>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-list-item"><a class="nav-list-link" href="#about">About Me</a></li>
-                <li class="nav-list-item"><a class="nav-list-link" href="#hobbies">My Hobbies</a></li>
-                <li class="nav-list-item"><a class="nav-list-link" href="#skills">Skills</a></li>
-                <li class="nav-list-item"><a class="nav-list-link" href="#contact">Contact</a></li>
+        <h1>My<span>Portfolio</span></h1>
+        <nav class="navbar">
+            <ul class= "nav-list">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#hobbies">My Hobbies</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!--About me-->
 
-    <section class="about-me" id="about">
+    <div class="about-me" id="about">
         <h1>About Me</h1>
         <p>
             Hi, I'm <strong>Michael Toth</strong>, a sofware engineering student living in Richmond, VA. This is the first site I've created
@@ -28,52 +30,69 @@
             the past 5 years. I'm excited to learn to code and ready to expand my skillset (while continuing to update my website!) over the
             next few months.
         </p>
-    </section>
+    </div>
 
     <!--My hobbies-->
     
-    <section class="my-hobbies" id="hobbies">
-        <h1>My Hobbies</h1>
-        <ul class="hobbies-list">
-            <li class="hobbies-items">Sports - DC teams only!
-                <ul>
-                    <li class="hobbies-sports-items"><a href="https://www.mlb.com/nationals" target="_blank"> Washington Nationals</a></li>
-                    <li class="hobbies-sports-items"><a href="https://www.washingtonfootball.com/" target="_blank">Washington Football Team</a></li>
-                    <li class="hobbies-sports-items"><a href="https://www.nhl.com/capitals/" target="_blank">Washington Capitals</a></li>
-                    <li class="hobbies-sports-items"><a href="https://www.nba.com/wizards/" target="_blank">Washington Wizards</a></li>
-                    <li class="hobbies-sports-items"><a href="https://umterps.com/" target="_blank">Maryland Basketball/Football</a></li>
-                </ul>
-            </li>
-            <li>Video games</li>
-            <li>Golf</li>
-            <li>Hiking</li>
-        </ul>
-    </section>
+    <div class="my-hobbies" id="hobbies">
+        <h1>Hobbies & Interests</h1>
+    </div>  
+    <div class="sports-container">
+        <div><a href="https://www.mlb.com/nationals" target="_blank">
+            <img src="nats logo.jpg" style="width: 175px; height: 175px" alt="Washington Nationals logo"></a></div>
+        <div><a href="https://www.washingtonfootball.com/" target="_blank">
+            <img src="wft logo.jpg" alt="Washington Football Team logo" style="width: 175px; height: 175px"></a></div>
+        <div><a href="https://www.nhl.com/capitals/" target="_blank">
+            <img src="caps logo.jpg" alt="Washington Capitals logo" style="width: 175px; height: 175px"></a></div>
+        <div><a href="https://www.nba.com/wizards/" target="_blank">
+            <img src="wizards logo.jpg" alt="Washington Wizards logo" style="width: 175px; height: 175px"></a></div>
+        <div><a href="https://umterps.com/" target="_blank">
+            <img src="umd logo.jpg" alt="University of Maryland logo" style="width: 175px; height: 175px"></a></div>
+    </div>
+    <div class="hobbies-container">
+        <div><img src="golf.jpg" alt="Golf ball near a hole" style="width: 250px; height: 250px"></div>
+        <div><img src="hiking.jpg" alt="People hiking a mountain" style="width: 250px; height: 250px"></div>
+        <div><img src="xbox.jpg" alt="Xbox logo" style="width: 250px; height: 250px"></div>
+        <div><img src="basketball.jpg" alt="basketball" style="width: 250px; height: 250px"></div>
+    </div>
 
     <!--Skills-->
 
-    <section class="skills-projects" id="skills">
+    <div class="skills-projects" id="skills">
         <h1>Skills & Projects</h1>
         <p>
             This section will eventually be re-worked to highlight my development skills and completed projects.
-            As of now, they really just consist of a html, a bit of CSS and minimal JavaScript. In short time, this
+            As of now, they really just consist of some html, a bit of CSS and minimal JavaScript. In short time, this
             section will be updated a full of completed projects!
         </p>
-    </section>
+    </div>
 
     <!--Contact-->
 
-    <form class="contact-form" id="contact" action="mailto: mtoth003@gmail.com">
-        First Name:<br>
-        <input type="text" name="first name" placeholder="Enter your first name"><br>
-        Last Name:<br>
-        <input type="text" name="last name" placeholder="Enter your last name"><br>
-        Email:<br>
-        <input type="email" name="email" placeholder="Enter your email address"><br>
-        Comment:<br>
-        <input type="text" name="comment" placeholder="Type your comment/request here"><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset">
-    </form>
+    <div class="contact-title" id="contact">
+        <h1>Give Me a Shout!</h1>
+    </div>
+    <div class="form-container">
+        <form action="mailto: mtoth003@gmail.com">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+            <label for="request">Request</label>
+            <select id="request" name="request">
+                <option hidden disabled selected value>Select a project</option>
+                <option value="landing page">Landing Page</option>
+                <option value=" personal Website">Personal Website</option>
+                <option value="JavaScript Quiz">JavaScript Quiz</option>
+                <option value="JavaScript Game">JavaScript Game</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="project details">Project Details</label>
+            <textarea id="project details" name="project details" placeholder="Provide some info about your request"
+            style="height: 200px"></textarea>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
 </body>
 </html>
