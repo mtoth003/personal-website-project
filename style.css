@@ -1,6 +1,8 @@
-/* General styles */
+/* Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* General styles */
 
 * {
     box-sizing: border-box;
@@ -72,7 +74,7 @@ header h1 {
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 700px;
     position: relative;
     margin: auto;
 }
@@ -113,6 +115,13 @@ header h1 {
     background: rgba(0,0,0,0.8);
 }
 
+/* Slideshow photo size */
+
+/*.mySlides img {
+    height: 600px;
+    width: 800px;
+}/*
+
 /* Caption text */
 
 .text {
@@ -124,6 +133,54 @@ header h1 {
     width: 100%;
     text-align: center;
 }
+
+/* Number text (1/7 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fade animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
 
 /* Body */
 
@@ -146,6 +203,7 @@ header h1 {
 .my-hobbies h1 {
     text-align: center;
     font-size: 2.0vw;
+    padding-top: 25px;
 }
 
 .sports-container img {
@@ -175,7 +233,9 @@ header h1 {
 }
 
 .skills-projects {
-    margin: 15px
+    margin: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .skills-projects h1 {
